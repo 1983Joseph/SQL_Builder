@@ -78,6 +78,7 @@ public class Util {
     Condition c1 = DSL.field("Jobs").in(1, 2, 3);
     Condition c2 = DSL.field("Jobs").in(DSL.field("aaaa"));
     Condition c3 = c1.or(c2);
+    Condition c4 = c2.or(c1);
     conditions.add(c3);
     return conditions;
   }
